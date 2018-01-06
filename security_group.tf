@@ -36,6 +36,12 @@ resource "aws_security_group" "iw-ad001SecurityGroup_private" {
 		protocol = "tcp"
 		security_groups = ["${aws_security_group.iw-ad001SecurityGroup_public.id}"]
 	}
+	ingress {
+		from_port = 0
+		to_port = 0
+		protocol = "-1"
+		cidr_blocks = ["${aws_subnet.iw-ad001Subnet_private.cidr_block}"]
+	}
 	egress {
 		from_port = 0
 		to_port = 0
