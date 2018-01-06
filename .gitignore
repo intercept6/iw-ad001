@@ -1,0 +1,8 @@
+variables.tf
+terraform.tfstate*
+.terraform*
+.terraform/
+.envrc
+iw-ad001*
+variable_key.tf
+.DS_Store
