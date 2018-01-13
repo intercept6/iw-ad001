@@ -37,5 +37,5 @@ terraform apply
 ```bash
 ssh -fNC -L 13389:10.0.10.11:3389 -i ./iw-ad001 ec2-user@[[ad01IPaddr]]
 ssh -fNC -L 23389:10.0.10.12:3389 -i ./iw-ad001 ec2-user@[[ad02IPaddr]]
-ssh -fNC -L 33389:10.0.10.113:3389 -i ./iw-ad001 ec2-user@[[client01IPaddr]]
+ssh -fNC -L 33389:10.0.10.13:3389 -i ./iw-ad001 ec2-user@[[client01IPaddr]]
 ```
