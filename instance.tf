@@ -38,7 +38,7 @@ resource "aws_instance" "iw-ad001Instance_ad01" {
 	]
 	subnet_id = "${aws_subnet.iw-ad001Subnet_private.id}"
 	private_ip = "10.0.10.11"
-	associate_public_ip_address = "true"
+	associate_public_ip_address = "false"
 	root_block_device = {
 		volume_type = "gp2"
 		volume_size = "40"
@@ -59,7 +59,7 @@ resource "aws_instance" "iw-ad001Instance_ad02" {
 		"${aws_security_group.iw-ad001SecurityGroup_private.id}"
 	]
 	subnet_id = "${aws_subnet.iw-ad001Subnet_private.id}"
-	associate_public_ip_address = "true"
+	associate_public_ip_address = "false"
 	private_ip = "10.0.10.12"
 	root_block_device = {
 		volume_type = "gp2"
@@ -81,7 +81,7 @@ resource "aws_instance" "iw-ad001Instance_client01" {
 		"${aws_security_group.iw-ad001SecurityGroup_private.id}"
 	]
 	subnet_id = "${aws_subnet.iw-ad001Subnet_private.id}"
-	associate_public_ip_address = "true"
+	associate_public_ip_address = "false"
 	private_ip = "10.0.10.13"
 	root_block_device = {
 		volume_type = "gp2"
